@@ -82,20 +82,19 @@ _Your README.md must include:_
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+<!-- We set up this application to create new articles, read existing and newly added articles on page refresh, update the articles and their details, and delete any unnecessary articles if needed.  -->
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+<!-- We created SQL queries which will execute to do all of the CRUD operations on our page. -->
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+<!-- The focus of this lab was demonstrating the CRUD operations as communicated between user client, server controller, and database model.  We used ExpressJS to simplify this process.-->
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+<!-- 11-3-2017 9:00am - Begin lab with Kerry driving and Phelan navigating.  Began working through setting up the node and SQL environments in terminal.
+ +
+ +11-3-2017 10:15am - Phelan drove and Kerry navigated.  We tackled most of the TODOs which explained the CRUD operations.
+ +
+ +11-3-2017 12noon - Kerry drove and Phelan navigated as we debugged and wrote the README.
 -->
 ```
