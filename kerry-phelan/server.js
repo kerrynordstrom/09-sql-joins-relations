@@ -113,7 +113,7 @@ app.put('/articles/:id', function(request, response) {
           request.body.category,
           request.body.publishedOn,
           request.body.body,
-          request.body.articles_id]
+          request.params.id]
       )
     })
     .then(() => {
