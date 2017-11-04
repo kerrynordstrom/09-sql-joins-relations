@@ -59,10 +59,8 @@ app.post('/articles', (request, response) => {
     client.query(
       `SELECT author_id
       FROM authors
-      WHERE author = $1 AND "authorUrl" = $2;
-      `,
-      [request.body.author,
-        request.body.authorUrl],
+      WHERE author = $1;`,
+      [request.body.author],
       function(err, result) {
         if (err) console.error(err);
 
@@ -77,7 +75,7 @@ app.post('/articles', (request, response) => {
     // DONE: In the provided array, add the data from our new article, including the author_id, as data for the SQL query.
     client.query(
       `INSERT INTO articles (author_id, title, category, "publishedOn", body)
-      VALUES ($1, $2, $3, $4, $5)`,
+      VALUES ($1, $2, $3, $4, $5);`,
       [ author_id,
         request.body.title,
         request.body.category,
@@ -98,7 +96,7 @@ app.put('/articles/:id', function(request, response) {
   client.query(
     `UPDATE authors
     SET author=$1, "authorUrl"=$2
-    WHERE author_id=$3`,
+    WHERE author_id=$3;`,
     [request.body.author,request.body.authorUrl,request.body.id]
   )
     .then(() => {
@@ -107,7 +105,7 @@ app.put('/articles/:id', function(request, response) {
       client.query(
         `UPDATE articles
       SET author_id=$1, title=$2, category=$3, "publishedOn"=$4, body=$5
-      WHERE article_id=$6`,
+      WHERE article_id=$6;`,
         [request.body.author_id,
           request.body.title,
           request.body.category,
